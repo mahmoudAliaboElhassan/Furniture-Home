@@ -1,0 +1,30 @@
+    @use "./Sass/helper/variables" as *;
+    @use "./Sass/helper/mixin" as *;
+    .navbar {
+        background-color: $dark-color;
+        @include prefixer(position, sticky);
+        top: 0;
+        z-index: 999;
+        color: white !important;
+        li {
+            a {
+                color: white;
+                &.active,
+                &:hover,
+                &:focus {
+                    color: $green-color !important;
+                }
+            }
+        }
+        .search {
+            border-left: 1px solid$green-color;
+            svg {
+                color: $green-color;
+            }
+        }
+        .navbar-toggler {
+            font-size: 25px;
+            border: 1px solid white;
+            color: white;
+        }
+    }

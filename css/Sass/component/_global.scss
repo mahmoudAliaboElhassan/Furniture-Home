@@ -1,0 +1,25 @@
+@use "./Sass/helper/mixin" as *;
+* {
+  padding: 0;
+  margin: 0;
+  @include prefixer(box-sizing, border-box);
+}
+
+body {
+  background-color: #f6f6f6;
+  font: {
+    family: "Roboto", sans-serif;
+    size: 16px;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}

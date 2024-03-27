@@ -1,0 +1,16 @@
+@mixin prefixer($prop, $val) {
+    -webkit-#{$prop}: $val;
+    -moz-#{$prop}: $val;
+    -ms-#{$prop}: $val;
+    -o-#{$prop}: $val;
+    #{$prop}: $val;
+}
+
+@mixin chang-bgc($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
+
+@mixin before {
+    content: "";
+    position: absolute;
+}

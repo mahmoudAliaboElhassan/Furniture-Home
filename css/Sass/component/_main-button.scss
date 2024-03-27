@@ -1,0 +1,13 @@
+@use "./Sass/helper/variables" as *;
+@use "./Sass/helper/mixin" as *;
+.main-btn {
+    border-radius: 16px;
+    padding: 10px 15px;
+    color: white;
+    background-color: $btn-color;
+    cursor: pointer;
+    @include prefixer(transition, 0.3s);
+    &:hover {
+        @include chang-bgc($btn-color, 0.7);
+    }
+}

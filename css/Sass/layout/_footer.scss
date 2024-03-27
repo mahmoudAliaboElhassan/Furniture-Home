@@ -1,0 +1,67 @@
+@use "./Sass/helper/variables" as *;
+@use "./Sass/helper/mixin" as *;
+.footer {
+  background-color: $faint-color;
+  h1 {
+    color: black;
+  }
+  .copyright {
+    > span {
+      color: $green-color;
+    }
+    div {
+      span {
+        color: $yellow-color;
+      }
+    }
+  }
+  .row {
+    img {
+      width: 100px;
+      height: 70px;
+    }
+  }
+
+  a {
+    color: $dark-color;
+    padding-right: 10px;
+    font-size: 25px;
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    transition: 0.8s;
+    &:hover {
+      transform: translateY(10px);
+    }
+    svg {
+      padding: 6px;
+      margin-right: 5px;
+      cursor: pointer;
+      &.instgram {
+        color: #1877f2;
+      }
+      &.mail {
+        color: rgb(230, 49, 49);
+      }
+      &.phone {
+        color: yellowgreen;
+      }
+    }
+  }
+  .footer-end {
+    font-size: 30px;
+    background-color: $dark-color;
+  }
+  .images {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    width: 350px;
+    height: 350px;
+    max-width: 100%;
+    margin-right: 15px;
+  }
+}

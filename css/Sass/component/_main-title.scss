@@ -1,0 +1,15 @@
+@use "./Sass/helper/variables" as *;
+@use "./Sass/helper/mixin" as *;
+.main-title {
+    position: relative;
+    margin-bottom: 30px;
+    &:before {
+        @include before;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -15px;
+        width: 120px;
+        height: 2px;
+        background-color: $green-color;
+    }
+}

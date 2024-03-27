@@ -1,0 +1,113 @@
+@use "./Sass/helper/variables" as *;
+@use "./Sass/helper/mixin" as *;
+.landing {
+    background-color: $dark-color;
+    min-height: calc(100vh - 72px);
+}
+
+.features {
+    .container {
+        .icon-holder {
+            height: 200px;
+            svg {
+                left: 50%;
+                transform: translateX(-50%);
+                &.number {
+                    font-size: 12rem;
+                    color: $faint-color;
+                }
+                &.icon {
+                    color: $green-color;
+                }
+            }
+        }
+    }
+}
+
+.Our-Work {
+    background-color: $faint-color;
+    ul {
+        li {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            &.active {
+                color: $green-color !important;
+            }
+            &:not(.active):hover {
+                color: $btn-color;
+            }
+        }
+    }
+    .box {
+        padding: 5px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        &::before {
+            @include before;
+            content: attr(data-work);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include chang-bgc($green-color, 0.4);
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            font-weight: bold;
+            color: white;
+            font-size: 1.5rem;
+            transition: 0.3s;
+            font-style: italic;
+            @include prefixer(transform, translateX(calc(-100% - 5px)));
+        }
+        &:hover::before {
+            @include prefixer(transform, translateX(0));
+        }
+        img {
+            width: 100%;
+            height: 236px;
+        }
+    }
+}
+
+.stuff {
+    .container {
+        .description {
+            max-width: 500px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        img {
+            width: 100%;
+            height: 260px;
+        }
+    }
+}
+
+.our-team {
+    background-color: $faint-color;
+    p {
+        max-width: 500px;
+        margin: auto;
+    }
+    .box {
+        img {
+            width: 100%;
+            height: 236px;
+        }
+        h5 {
+            color: white;
+            background-color: $green-color;
+        }
+    }
+}
+
+.blog {
+    img {
+        height: 300px;
+    }
+}
+
+.project {
+    background-color: $dark-color;
+    color: white;
+}

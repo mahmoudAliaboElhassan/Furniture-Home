@@ -1,0 +1,20 @@
+@use "./Sass/helper/variables" as *;
+@use "./Sass/helper/mixin" as *;
+.subscribe {
+  background-color: $yellow-color;
+  input[type="text"] {
+    border: none;
+    border-bottom: 1px solid white;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: white;
+      font-weight: bold;
+    }
+  }
+  input[type="submit"] {
+    background-color: $dark-color;
+    color: $yellow-color;
+  }
+}
