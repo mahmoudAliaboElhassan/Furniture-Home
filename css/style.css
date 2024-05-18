@@ -266,7 +266,7 @@ a {
   margin-right: 5px;
   cursor: pointer;
 }
-.footer .icons svg.instgram {
+.footer .icons svg.facebook {
   color: #1877f2;
 }
 .footer .icons svg.mail {
@@ -278,6 +278,10 @@ a {
 .footer .footer-end {
   font-size: 30px;
   background-color: #19283f;
+}
+.footer .footer-end .heart {
+  color: red;
+  font-size: 50px;
 }
 .footer .images {
   display: -webkit-box;

@@ -39,7 +39,7 @@
       padding: 6px;
       margin-right: 5px;
       cursor: pointer;
-      &.instgram {
+      &.facebook {
         color: #1877f2;
       }
       &.mail {
@@ -53,6 +53,10 @@
   .footer-end {
     font-size: 30px;
     background-color: $dark-color;
+    .heart {
+      color: red;
+      font-size: 50px;
+    }
   }
   .images {
     display: flex;
